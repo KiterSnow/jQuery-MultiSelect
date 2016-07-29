@@ -552,6 +552,7 @@
         /* RESET THE DOM */
         unload: function() {
             $(this.element).next('.ms-options-wrap').remove();
+            $(this.element).find('option').remove();
             $(this.element).show(function(){
                 $(this).css('display','').removeClass('jqmsLoaded');
             });
@@ -561,6 +562,7 @@
         reload: function() {
             // remove existing options
             $(this.element).next('.ms-options-wrap').remove();
+            $(this.element).find('option').remove();
             $(this.element).removeClass('jqmsLoaded');
 
             // load element
